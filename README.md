@@ -1,4 +1,4 @@
-# 🌊 MyVolumeEnglish - Learn English through News
+# MyVolumeEnglish - Learn English through News
 
 ## Project Overview
 
