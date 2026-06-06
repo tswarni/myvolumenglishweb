@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyVolumeEnglish - Learn English through News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyVolumeEnglish</h1>
+                <p>Learn English through CNN News</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#levels">Levels</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Learn English from Real News</h2>
+            <p>Read CNN news articles matched to your English level</p>
+            <p class="subtitle">Choose your level and start learning today!</p>
+            <button class="cta-btn" onclick="scrollToArticles()">Start Learning</button>
+        </div>
+    </section>
+
+    <!-- Level Selection -->
+    <section class="level-selector" id="levels">
+        <div class="container">
+            <h2>Select Your English Level</h2>
+            <div class="levels-grid">
+                <div class="level-card" onclick="filterByLevel('beginner')">
+                    <div class="level-icon">🌱</div>
+                    <h3>Beginner</h3>
+                    <p>A1 - A2</p>
+                    <p class="level-desc">Simple vocabulary and short articles</p>
+                </div>
+                <div class="level-card" onclick="filterByLevel('intermediate')">
+                    <div class="level-icon">🌿</div>
+                    <h3>Intermediate</h3>
+                    <p>B1 - B2</p>
+                    <p class="level-desc">Moderate complexity and varied topics</p>
+                </div>
+                <div class="level-card" onclick="filterByLevel('advanced')">
+                    <div class="level-icon">🌳</div>
+                    <h3>Advanced</h3>
+                    <p>C1 - C2</p>
+                    <p class="level-desc">Complex articles with challenging vocabulary</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <h2>Featured Articles</h2>
+            
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <button class="filter-btn active" onclick="filterByLevel('all')">All Levels</button>
+                <button class="filter-btn" onclick="filterByLevel('beginner')">Beginner</button>
+                <button class="filter-btn" onclick="filterByLevel('intermediate')">Intermediate</button>
+                <button class="filter-btn" onclick="filterByLevel('advanced')">Advanced</button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Articles will be loaded here by JavaScript -->
+                <div class="loading">Loading articles...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Modal -->
+    <div class="modal" id="articleModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Article content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About MyVolumeEnglish</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>MyVolumeEnglish is an innovative platform designed to help you improve your English through real CNN news articles. Our system categorizes articles by English proficiency level (CEFR), making it easy for learners at any stage to find content that challenges but doesn't overwhelm them.</p>
+                    
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>📰 Real CNN news articles</li>
+                        <li>🎯 Content matched to your level</li>
+                        <li>📚 CEFR level classification (A1-C2)</li>
+                        <li>🎨 Beautiful, easy-to-read interface</li>
+                        <li>💾 Track your reading progress</li>
+                        <li>📝 Word definitions and explanations</li>
+                    </ul>
+
+                    <h3>How It Works:</h3>
+                    <ol>
+                        <li>Select your English level (Beginner, Intermediate, or Advanced)</li>
+                        <li>Browse curated CNN news articles</li>
+                        <li>Read articles with vocabulary support</li>
+                        <li>Learn useful vocabulary and expressions</li>
+                        <li>Progress to higher levels as you improve</li>
+                    </ol>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h4>500+</h4>
+                        <p>Curated Articles</p>
+                    </div>
+                    <div class="stat">
+                        <h4>3 Levels</h4>
+                        <p>CEFR A1 - C2</p>
+                    </div>
+                    <div class="stat">
+                        <h4>10,000+</h4>
+                        <p>Active Learners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MyVolumeEnglish. Learn English, One Article at a Time.</p>
+            <p class="disclaimer">Articles are sourced from CNN and other news outlets. Used for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
